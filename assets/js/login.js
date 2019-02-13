@@ -16,7 +16,7 @@
 			var email = $('#demo-email').val();
 			var password = $('#demo-password').val();
 			$.ajax({
-				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8152/login?email='+ email +'&password='+ password,
+				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/login?email='+ email +'&password='+ password,
 				type: 'POST',
 				success: function(data) {
 					// alert('Isotope: Login Success');

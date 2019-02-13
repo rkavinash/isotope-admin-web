@@ -7,7 +7,7 @@
 (function($) {
 
 	$(function() {
-
+logger.error("Failed",e);
 		$("#search-product").click(function() {
 			var searchProductData = {
 				"id": $('#product-id').val(),
@@ -18,7 +18,7 @@
 
 			var authToken = localStorage.getItem('authToken');
 			$.ajax({
-				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8152/user/search',
+				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/user/search',
 				beforeSend: function(request) {
 					request.setRequestHeader("authToken", authToken);
 					request.setRequestHeader("content-type", 'application/json');

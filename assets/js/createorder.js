@@ -19,7 +19,7 @@
 
 			var authToken = localStorage.getItem('authToken');
 			$.ajax({
-				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8152/user/createOrder',
+				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/user/createOrder',
 				beforeSend: function(request) {
 					request.setRequestHeader("authToken", authToken);
 					request.setRequestHeader("content-type", 'application/json');

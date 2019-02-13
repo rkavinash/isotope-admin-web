@@ -15,7 +15,7 @@
         var userId = localStorage.getItem('userId');
         var orderId = localStorage.getItem('orderIDforDownload');
         $.ajax({
-            url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8152/user/download?userId='+ userId + '&orderId='+ orderId,
+            url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/user/download?userId='+ userId + '&orderId='+ orderId,
             beforeSend: function(request) {
                 request.setRequestHeader("authToken", authToken);
                 request.setRequestHeader("content-type", 'application/json');
@@ -49,7 +49,7 @@
             jQuery.ajax({
                 type: "POST",
                 data: {},
-                url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8152/user/downloadFile?userId='+ userId +'&orderId=' + orderId + '&fileName='+ filename,
+                url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/user/downloadFile?userId='+ userId +'&orderId=' + orderId + '&fileName='+ filename,
                 dataType: 'json',
                 beforeSend: function(request) {
                     request.setRequestHeader("authToken", authToken);

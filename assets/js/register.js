@@ -17,7 +17,7 @@
 			 };
 
 			$.ajax({
-				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8152/register',
+				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/register',
 				type: 'POST',
 				data: JSON.stringify(registerData),
 				beforeSend: function(request) {
