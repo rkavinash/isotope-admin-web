@@ -13,15 +13,24 @@
 		});
 
 		$("#login-id").click(function() {
-			var email = $('#demo-email').val();
-			var password = $('#demo-password').val();
+			var loginData = {
+				"email": $('#demo-email').val(),
+				"password": $('#demo-password').val(),
+			 };
+
 			$.ajax({
-				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/login?email='+ email +'&password='+ password,
+				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/login',
 				type: 'POST',
+				data: JSON.stringify(loginData),
+				beforeSend: function(request) {
+					request.setRequestHeader("content-type", 'application/json');
+				},
 				success: function(data) {
 					// alert('Isotope: Login Success');
 					localStorage.setItem('authToken', data.authToken);
 					localStorage.setItem('userId', data.userId);
+					localStorage.setItem('clientId', data.clientID);
+					localStorage.setItem('dashboardOrders', data.dashboardOrders);
 					window.location.href="createorder.html";
 				  console.log('success: ', data);
 				},

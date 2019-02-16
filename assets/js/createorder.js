@@ -12,6 +12,7 @@
 			var createOrderData = {
 				"userId": localStorage.getItem('userId'),
 				"pid": $('#product-code').val(),
+				"name": $('#product-name').val(),
 				"pType": $('#product-type').val(),
 				"count": $('#product-count').val(),
 				"extras": getExtras()

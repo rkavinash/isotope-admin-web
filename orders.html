@@ -36,6 +36,7 @@
 							<table class="alt">
 								<thead>
 									<tr>
+										<th>Product Name</th>
 										<th>Product ID</th>
 										<th>Product Type</th>
 										<th>Count</th>
@@ -48,6 +49,7 @@
 								<tbody>
 									{{#each orderdata}}
 									<tr>
+										<td>{{this.name}}</td>
 										<td>{{this.prodId}}</td>
 										<td>{{this.prodType}}</td>
 										<td>{{this.count}}</td>
