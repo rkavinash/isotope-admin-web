@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Isotope Admin: identify Fake Product</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="images/search.png" type="image/gif" sizes="16x16">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="logo">Isotope Admin</a>
+					<nav id="nav">
+						<a href="support.html">Support</a>
+						<a id="menu-logout-id" href="login.html">Logout</a>
+						<!-- <a href="generic.html">Generic</a> -->
+					</nav>
+				</div>
+			</header>
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" >
+				<div class="inner">
+					<!-- Form -->
+					<section>
+						<h3>Dashboard</h3>
+						<!-- <form method="post" action="#"> -->
+							<div class="row uniform 25%">
+								<div class="card-columns" id="card-wrapper"> 
+									<!--Handlebar templates start-->
+									<script id="dashboard-card-template" type="text/x-handlebars-template">
+										{{#each dashboarddata}}
+										<div class="card border-secondary mb-3" style="max-width: 18rem;">
+											<div class="card-header">{{this.name}}</div>
+											<!-- {{#if this.name}}
+											<div class="card-header">{{this.name}}</div>
+											{{else}}
+											<div class="card-header">Unkown</div>
+											{{/if}} -->
+											<div class="card-body text-info">
+												<p class="card-title">Prod Type: {{this.prodType}}</p>
+												<p class="card-text">Valid Scans: {{this.validScans}}</p>
+												<p class="card-text">Fake Scans: {{this.fakeScans}}</p>
+												<!-- <a href="#" class="card-link">see more..</a> -->
+											</div>
+											<div class="card-footer bg-transparent border-secondary">
+												<a href="#" class="card-link">see more..</a>
+											</div>
+										</div>
+										{{/each}}
+									</script>
+									<!--Handlebar templates end-->
+								</div>
+							</div>
+						<!-- </form> -->
+					</section>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<section id="footer">
+				<div class="inner">
+					<div class="copyright">
+						Copyright &copy; isotope @2018  All rights reserved.
+					</div>
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/lib/bootstrap.bundle.js"></script>
+			<script src="assets/js/lib/handlebars.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/dashboard.js"></script>
+
+	</body>
+</html>

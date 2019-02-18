@@ -31,7 +31,7 @@
 					localStorage.setItem('userId', data.userId);
 					localStorage.setItem('clientId', data.clientID);
 					localStorage.setItem('dashboardOrders', data.dashboardOrders);
-					window.location.href="createorder.html";
+					window.location.href="dashboard.html";
 				  console.log('success: ', data);
 				},
 				error: function(data) {
