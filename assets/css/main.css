@@ -4024,7 +4024,7 @@
 			background-color: transparent;
 			border: 0;
 		}
-		
+
 		.add-fields-container {
 			float: left;
 			margin-right: 10px;
@@ -4049,7 +4049,7 @@
 			font-weight: bold;
 			word-spacing: -0.1em;
 		}
-		
+
 		.dropdown-item-generic:focus, .dropdown-item-generic:hover {
 			color: #16181b;
 			text-decoration: none;
@@ -4065,4 +4065,8 @@
 		.download-link, .download-file {
 			color: #116798 !important;
 			cursor: pointer;
+		}
+
+		.place-locations {
+			margin-top: 20px;
 		}

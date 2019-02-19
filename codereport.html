@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Isotope Admin: identify Fake Product</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="images/search.png" type="image/gif" sizes="16x16">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="logo">Isotope Admin</a>
+					<nav id="nav">
+						<a href="support.html">Support</a>
+						<a id="menu-logout-id" href="login.html">Logout</a>
+						<!-- <a href="generic.html">Generic</a> -->
+					</nav>
+				</div>
+			</header>
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" >
+				<div class="inner">
+					<!-- Form -->
+					<section>
+						<div id="card-wrapper">
+							<!--Handlebar templates start-->
+							<script id="codereport-card-template" type="text/x-handlebars-template">
+								<div class="jumbotron">
+									<h1 class="display-4">{{dashboardOrder.name}}</h1>
+									<hr class="my-4">
+
+									<ul class="list-group">
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											Count
+											<span class="badge badge-primary badge-pill">{{dashboardOrder.count}}</span>
+										</li>
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											valid Scans
+											<span class="badge badge-primary badge-pill">{{dashboardOrder.validScans}}</span>
+										</li>
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											Fake Scans
+											<span class="badge badge-primary badge-pill">{{dashboardOrder.fakeScans}}</span>
+										</li>
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											Order Number
+											<span class="badge badge-primary badge-pill">{{dashboardOrder.orderNo}}</span>
+										</li>
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											Date
+											<span class="badge badge-primary badge-pill">{{dashboardOrder.date}}</span>
+										</li>
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											Extras
+											<span class="badge badge-primary badge-pill">{{dashboardOrder.extras}}</span>
+										</li>
+									</ul>
+									<br>
+									{{#each codeDetails}}
+									<div class="card place-locations">
+										<div class="card-header">Code: {{this.code}}</div>
+										<div class="card-body text-dark">
+											Scanned Locations:
+											{{#each this.places}}
+												<a href="{{this.href}}" class="badge badge-primary" target="_blank">{{this.name}}</a>
+											{{/each}}
+										</div>
+									</div>
+									{{/each}}
+								</div>
+							</script>
+							<!--Handlebar templates end-->
+						</div>
+					</section>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<section id="footer">
+				<div class="inner">
+					<div class="copyright">
+						Copyright &copy; isotope @2018  All rights reserved.
+					</div>
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/lib/bootstrap.bundle.js"></script>
+			<script src="assets/js/lib/handlebars.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/codereport.js"></script>
+
+	</body>
+</html>

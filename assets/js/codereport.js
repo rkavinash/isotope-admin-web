@@ -8,36 +8,32 @@
 
 	$(function() {
 
-		var source   = $("#dashboard-card-template").html();
+		var source   = $("#codereport-card-template").html();
 		var template = Handlebars.compile(source);
 
 		var authToken = localStorage.getItem('authToken');
 		var userId = localStorage.getItem('userId');
+		var params = new window.URLSearchParams(window.location.search);
+		var orderId = params.get('orderid');
 
 		$.ajax({
-			url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/user/dashboard?userId='+ userId,
+			url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/user/codeReport?userId='+ userId + '&orderId=' + orderId,
 			type: 'POST',
 			beforeSend: function(request) {
 				request.setRequestHeader("authToken", authToken);
 				request.setRequestHeader("content-type", 'application/json');
 			},
 			success: function(data) {
-				var context = { "dashboarddata": data.dashboardOrders };
-				var dashboardhtml = template(context);
-				$('#card-wrapper').html(dashboardhtml);
-				console.log('success dashboard: ', data);
+				var context =  data;
+				var codereporthtml = template(context);
+				$('#card-wrapper').html(codereporthtml);
+				console.log('success codeReport: ', data);
 			},
 			error: function(data) {
-				alert('dashboard error');
-				console.log('failure dashboard: ', data);
+				alert('codereport error');
+				console.log('failure codeReport: ', data);
 			}
 		});
-
-		$(document).on("click", '.card-link', function() {
-			var orderId = $(this).closest('.card').find('.orderNo').val();
-			window.location.href="codereport.html?orderid=" + orderId;
-		});
-
 	});
 
 })(jQuery);
