@@ -72,7 +72,7 @@
 		}
 
 		$("#createSuccess-close").click(function() {
-			window.location.href="orders.html";
+			window.location.href="dashboard.html";
 		});
 
 		$(".dropdown-item").click(function(ele) {
