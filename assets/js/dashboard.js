@@ -13,6 +13,7 @@
 
 		var authToken = localStorage.getItem('authToken');
 		var userId = localStorage.getItem('userId');
+		AOS.init();
 
 		$.ajax({
 			url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/user/dashboard?userId='+ userId,

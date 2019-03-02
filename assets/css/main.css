@@ -4075,3 +4075,11 @@
 	font-size: 0.5rem !important;
 	float: right;
 }
+
+.btn-font-small {
+	font-size: 0.5rem !important;
+}
+
+.dashboard-header-padding {
+	padding-bottom: 2.5rem;
+}

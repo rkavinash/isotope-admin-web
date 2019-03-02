@@ -6,7 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" href="images/search.png" type="image/gif" sizes="16x16">
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+		<!-- <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" /> -->
+		<link rel="stylesheet" href="assets/css/lib/bootstrap-material-design.css" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
 	<body>
 
@@ -14,7 +16,7 @@
 			<header id="header">
 				<div class="inner">
 					<a href="#" class="logo">Isotope Admin</a>
-					<nav id="nav">
+					<nav id="nav" class="navbar navbar-dark bg-dark">
 						<a id="menu-dashboard-id" href="dashboard.html">Dashbaord</a>
 						<a href="support.html">Support</a>
 						<a id="menu-logout-id" href="login.html">Logout</a>
@@ -31,39 +33,39 @@
 						<div id="card-wrapper">
 							<!--Handlebar templates start-->
 							<script id="codereport-card-template" type="text/x-handlebars-template">
-								<div class="jumbotron">
+								<div class="jumbotron" data-aos="flip-left" data-aos-duration="3000">
 									<h1 class="display-4">{{dashboardOrder.name}}</h1>
 									<hr class="my-4">
 
 									<ul class="list-group">
 										<li class="list-group-item d-flex justify-content-between align-items-center">
 											Count
-											<span class="badge badge-primary badge-pill">{{dashboardOrder.count}}</span>
+											<span class="badge badge-primary">{{dashboardOrder.count}}</span>
 										</li>
 										<li class="list-group-item d-flex justify-content-between align-items-center">
 											valid Scans
-											<span class="badge badge-primary badge-pill">{{dashboardOrder.validScans}}</span>
+											<span class="badge badge-primary">{{dashboardOrder.validScans}}</span>
 										</li>
 										<li class="list-group-item d-flex justify-content-between align-items-center">
 											Fake Scans
-											<span class="badge badge-primary badge-pill">{{dashboardOrder.fakeScans}}</span>
+											<span class="badge badge-primary">{{dashboardOrder.fakeScans}}</span>
 										</li>
 										<li class="list-group-item d-flex justify-content-between align-items-center">
 											Order Number
-											<span class="badge badge-primary badge-pill">{{dashboardOrder.orderNo}}</span>
+											<span class="badge badge-primary">{{dashboardOrder.orderNo}}</span>
 										</li>
 										<li class="list-group-item d-flex justify-content-between align-items-center">
 											Date
-											<span class="badge badge-primary badge-pill">{{dashboardOrder.date}}</span>
+											<span class="badge badge-primary">{{dashboardOrder.date}}</span>
 										</li>
 										<li class="list-group-item d-flex justify-content-between align-items-center">
 											Extras
-											<span class="badge badge-primary badge-pill">{{dashboardOrder.extras}}</span>
+											<span class="badge badge-primary">{{dashboardOrder.extras}}</span>
 										</li>
 									</ul>
 									<br>
 									{{#each codeDetails}}
-									<div class="card place-locations">
+									<div class="card place-locations" data-aos="fade-right" data-aos-duration="1000">
 										<div class="card-header">Code: {{this.code}}</div>
 										<div class="card-body text-dark">
 											Scanned Locations:
@@ -92,7 +94,10 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/lib/bootstrap.bundle.js"></script>
+			<!-- <script src="assets/js/lib/bootstrap.bundle.js"></script> -->
+			<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+			<script src="assets/js/lib/bootstrap-material-design.js"></script>
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 			<script src="assets/js/lib/handlebars.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>

@@ -6,15 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" href="images/search.png" type="image/gif" sizes="16x16">
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+		<!-- <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" /> -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+		<link rel="stylesheet" href="assets/css/lib/bootstrap-material-design.css" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> -->
+
 	</head>
 	<body>
 
 		<!-- Header -->
 			<header id="header">
-				<div class="inner">
+				<div class="inner navbar-dark">
 					<a href="#" class="logo">Isotope Admin</a>
-					<nav id="nav">
+					<nav id="nav" class="navbar navbar-dark bg-dark">
 						<a id="menu-createorder-id" href="createorder.html">Create Order</a>
 						<a href="support.html">Support</a>
 						<a id="menu-logout-id" href="login.html">Logout</a>
@@ -29,27 +34,27 @@
 				<div class="inner">
 					<!-- Form -->
 					<section>
-						<h3>Dashboard</h3>
+						<h3 class="text-center text-monospace dashboard-header-padding">Dashboard</h3>
 						<!-- <form method="post" action="#"> -->
 							<div class="row uniform 25%">
 								<div class="card-columns" id="card-wrapper">
 									<!--Handlebar templates start-->
 									<script id="dashboard-card-template" type="text/x-handlebars-template">
 										{{#each dashboarddata}}
-										<div class="card border-secondary mb-3" style="max-width: 18rem;">
-											<div class="card-header">{{this.name}}</div>
+										<div class="card border-secondary mb-3" style="max-width: 18rem;" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom">
+											<div class="card-header text-center font-weight-bold">{{this.name}}</div>
 											<div class="card-body text-info">
-												<p class="card-title">Count: {{this.count}}</p>
-												<p class="card-text">Valid Scans: {{this.validScans}}</p>
-												<p class="card-text">Fake Scans: {{this.fakeScans}}</p>
+												<p class="card-title text-center">Count: {{this.count}}</p>
+												<p class="card-text text-center text-success">Valid Scans: {{this.validScans}}</p>
+												<p class="card-text text-center text-danger">Fake Scans: {{this.fakeScans}}</p>
 												<input type="hidden" class="orderNo" value="{{this.orderNo}}"></p>
 												<input type="hidden" class="pextras" value="{{this.extras}}"></p>
 												<input type="hidden" class="pprodid" value="{{this.prodId}}"></p>
 												<input type="hidden" class="pprodtype" value="{{this.prodType}}"></p>
 											</div>
 											<div class="card-footer bg-transparent border-secondary">
-												<a href="#" class="card-link">see more...</a>
-												<a href="#" class="btn btn-primary parent-order-btn">Create Parent Order</a>
+												<a href="#" class="btn btn-primary btn-raised card-link btn-font-small">see more...</a>
+												<a href="#" class="btn btn-primary btn-raised parent-order-btn">Create Parent Order</a>
 											</div>
 										</div>
 										{{/each}}
@@ -73,7 +78,10 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/lib/bootstrap.bundle.js"></script>
+			<!-- <script src="assets/js/lib/bootstrap.bundle.js"></script> -->
+			<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+			<script src="assets/js/lib/bootstrap-material-design.js"></script>
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 			<script src="assets/js/lib/handlebars.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>

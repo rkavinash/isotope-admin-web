@@ -16,6 +16,8 @@
 		var params = new window.URLSearchParams(window.location.search);
 		var orderId = params.get('orderid');
 
+		AOS.init();
+
 		$.ajax({
 			url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/user/codeReport?userId='+ userId + '&orderId=' + orderId,
 			type: 'POST',
