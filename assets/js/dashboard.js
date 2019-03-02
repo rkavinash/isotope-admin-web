@@ -38,6 +38,24 @@
 			window.location.href="codereport.html?orderid=" + orderId;
 		});
 
+		$(document).on("click", '.parent-order-btn', function() {
+			var porderId = $(this).closest('.card').find('.orderNo').val();
+			var pextras = $(this).closest('.card').find('.pextras').val();
+			var pname = $(this).closest('.card').find('.card-header').text();
+			var pprodid = $(this).closest('.card').find('.pprodid').val();
+			var pprodtype = $(this).closest('.card').find('.pprodtype').val();
+			var pextras = $(this).closest('.card').find('.pextras').val();
+
+			localStorage.setItem('p-ordernum', porderId);
+			localStorage.setItem('p-extras', pextras);
+			localStorage.setItem('p-name', pname);
+			localStorage.setItem('p-prodid', pprodid);
+			localStorage.setItem('p-prodtype', pprodtype);
+			localStorage.setItem('p-extras', pextras);
+			
+			window.location.href="createparentorder.html";
+		});
+
 	});
 
 })(jQuery);

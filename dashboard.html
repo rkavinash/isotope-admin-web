@@ -43,9 +43,13 @@
 												<p class="card-text">Valid Scans: {{this.validScans}}</p>
 												<p class="card-text">Fake Scans: {{this.fakeScans}}</p>
 												<input type="hidden" class="orderNo" value="{{this.orderNo}}"></p>
+												<input type="hidden" class="pextras" value="{{this.extras}}"></p>
+												<input type="hidden" class="pprodid" value="{{this.prodId}}"></p>
+												<input type="hidden" class="pprodtype" value="{{this.prodType}}"></p>
 											</div>
 											<div class="card-footer bg-transparent border-secondary">
-												<a href="#" class="card-link">see more..</a>
+												<a href="#" class="card-link">see more...</a>
+												<a href="#" class="btn btn-primary parent-order-btn">Create Parent Order</a>
 											</div>
 										</div>
 										{{/each}}

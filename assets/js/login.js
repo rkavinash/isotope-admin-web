@@ -28,7 +28,7 @@
 				success: function(data) {
 					// alert('Isotope: Login Success');
 					localStorage.setItem('authToken', data.authToken);
-					localStorage.setItem('userId', data.userId);
+					localStorage.setItem('userId', data.id);
 					localStorage.setItem('clientId', data.clientID);
 					window.location.href="dashboard.html";
 				  	console.log('success: ', data);
