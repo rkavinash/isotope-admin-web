@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" href="images/search.png" type="image/gif" sizes="16x16">
+		<link rel="stylesheet" href="assets/css/lib/bootstrap-material-design.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!-- <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" /> -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
@@ -34,41 +35,62 @@
 				<div class="inner">
 					<!-- Form -->
 					<section>
-						<h3 class="text-monospace dashboard-header-padding">Create Parent Order</h3>
+						<h3 class="text-center  text-monospace dashboard-header-padding title-class">Create Parent Order</h3>
+
 							<div class="row uniform 25%" >
 									<div  class="row uniform 50%" id="create-order-container">
-										<div class="6u 6u$(small)">
-												<div>Product Name</div>
-												<input type="text" id="product-name" value=""  disabled="disabled" placeholder="Product Name (Ex:Colgate 250g)" />
-										</div>
-										<div class="12u 12u$(xsmall)">
-											<div>Product Id</div>
-											<input type="text" id="product-code" value="" disabled="disabled" placeholder="Product (Ex:12)" />
-										</div>
-										<div class="12u 12u$(xsmall)">
-											<div>Product Type</div>
-											<input type="text"  id="product-type" value="" disabled="disabled" placeholder="Product Type (Ex:34)" />
-										</div>
-										<div class="12u 12u$(xsmall)">
-											<div>Parent Product Count</div>
-											<input type="text" id="product-count" autofocus value="" placeholder="Parent Product Count (Ex:100)" />
-										</div>
-										<div class="12u 12u$(xsmall)">
-											<div>Manufacturing Date</div>
-											<input type="text" id="add-manf-date" value="" disabled="disabled" placeholder="Manufacturing Date"/>
-										</div>
-										<div class="12u 12u$(xsmall)">
-											<div>Expiry Date</div>
-											<input type="text" id="add-expiry-date" value="" disabled="disabled" placeholder="Expiry Date"/>
-										</div>
-									</div>
-								<div class="12u$">
 
+											<div class="input-group input-group-sm mb-6">
+												<div class="input-group-prepend">
+													<span class="input-group-text" id="inputGroup-sizing-sm">Product Name</span>
+												</div>
+												<input type="text" id="product-name"  disabled="disabled"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+											</div>
+
+											<div class="input-group input-group-sm mb-6">
+												<div class="input-group-prepend">
+													<span class="input-group-text" id="inputGroup-sizing-sm">Product Id</span>
+												</div>
+												<input type="text" id="product-code" disabled="disabled" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+											</div>
+
+											<div class="input-group input-group-sm mb-6">
+													<div class="input-group-prepend">
+														<span class="input-group-text" id="inputGroup-sizing-sm">Product Type</span>
+													</div>
+													<input type="text" id="product-type" disabled="disabled" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+											</div>
+
+											<div class="input-group input-group-sm mb-6">
+													<div class="input-group-prepend">
+														<span class="input-group-text" id="inputGroup-sizing-sm">Parent Product Count</span>
+													</div>
+													<input type="text" id="product-count"  autofocus class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+											</div>
+
+											<div class="input-group input-group-sm mb-6">
+													<div class="input-group-prepend">
+														<span class="input-group-text" id="inputGroup-sizing-sm">Manufacturing Date</span>
+													</div>
+													<input type="text" id="add-manf-date" disabled="disabled" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+											</div>
+
+											<div class="input-group input-group-sm mb-6">
+													<div class="input-group-prepend">
+														<span class="input-group-text" id="inputGroup-sizing-sm">Expiry Date</span>
+													</div>
+													<input type="text" id="add-expiry-date" disabled="disabled" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+											</div>
+
+										</div>
+
+
+								<div class="6u$">
 									<ul class="actions">
 											<li><input id="create-parent-order-id" type="submit" value="Create Box Order" class="special" /></li>
 									</ul>
-
 								</div>
+
 							</div>
 						</section>
 				</div>
