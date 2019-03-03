@@ -1592,7 +1592,7 @@
 		font-family: "Lato", sans-serif;
 		font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 		font-size: 15pt;
-		font-weight: 500;
+		font-weight: 200;
 		line-height: 2;
 	}
 
@@ -1851,7 +1851,7 @@
 		cursor: pointer;
 		display: inline-block;
 		font-size: .8em;
-		font-weight: 700;
+		font-weight: 300;
 		height: 3.5em;
 		line-height: 3.65em;
 		padding: 0 2.25em;
@@ -4094,4 +4094,8 @@
 
 #main {
 	padding: 1em 0 2em 0;
+}
+
+.card-body .list-group-item {
+	margin-top: 10px !important;
 }
