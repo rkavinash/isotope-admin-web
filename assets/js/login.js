@@ -19,7 +19,7 @@
 			 };
 
 			$.ajax({
-				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/login',
+				url: common.loginURL,
 				type: 'POST',
 				data: JSON.stringify(loginData),
 				beforeSend: function(request) {

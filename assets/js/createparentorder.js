@@ -38,7 +38,7 @@
 
 			var authToken = localStorage.getItem('authToken');
 			$.ajax({
-				url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/user/createOrder',
+				url: common.createParentOrderURL,
 				beforeSend: function(request) {
 					request.setRequestHeader("authToken", authToken);
 					request.setRequestHeader("content-type", 'application/json');

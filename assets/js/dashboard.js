@@ -16,7 +16,7 @@
 		AOS.init();
 
 		$.ajax({
-			url: 'http://ec2-13-232-25-67.ap-south-1.compute.amazonaws.com:8142/user/dashboard?userId='+ userId,
+			url: common.dashboardURL + userId,
 			type: 'POST',
 			beforeSend: function(request) {
 				request.setRequestHeader("authToken", authToken);

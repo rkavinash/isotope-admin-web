@@ -15,8 +15,8 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="#" class="logo">Isotope Admin</a>
-					<nav id="nav" class="navbar navbar-dark bg-dark">
+					<a href="#" class="logo">Isotope</a>
+					<nav id="nav" class="navbar navbar-dark">
 						<a id="menu-dashboard-id" href="dashboard.html">Dashbaord</a>
 						<a href="support.html">Support</a>
 						<a id="menu-logout-id" href="login.html">Logout</a>
@@ -40,27 +40,37 @@
 									<ul class="list-group">
 										<li class="list-group-item d-flex justify-content-between align-items-center">
 											Count
-											<span class="badge badge-primary">{{dashboardOrder.count}}</span>
+											<span class="badge badge-pill badge-info">{{dashboardOrder.count}}</span>
 										</li>
 										<li class="list-group-item d-flex justify-content-between align-items-center">
 											valid Scans
-											<span class="badge badge-primary">{{dashboardOrder.validScans}}</span>
+											<span class="badge badge-pill badge-success">{{dashboardOrder.validScans}}</span>
 										</li>
 										<li class="list-group-item d-flex justify-content-between align-items-center">
 											Fake Scans
-											<span class="badge badge-primary">{{dashboardOrder.fakeScans}}</span>
+											<span class="badge badge-pill badge-danger">{{dashboardOrder.fakeScans}}</span>
 										</li>
 										<li class="list-group-item d-flex justify-content-between align-items-center">
 											Order Number
-											<span class="badge badge-primary">{{dashboardOrder.orderNo}}</span>
+											<span class="badge badge-pill badge-info">{{dashboardOrder.orderNo}}</span>
 										</li>
-										<li class="list-group-item d-flex justify-content-between align-items-center">
+										{{#if dashboardOrder.parentOrderNo}}
+											<li class="list-group-item d-flex justify-content-between align-items-center">
+												Parent Order Number
+												<a href="codereport.html?orderid={{dashboardOrder.parentOrderNo}}" class="badge badge-primary align-self-end parent-order-num-btn">Get Details: {{dashboardOrder.parentOrderNo}}</a>
+											</li>
+										{{/if}}
+										<li class="list-group-item d-flex justify-content-between align-items-right">
 											Date
-											<span class="badge badge-primary">{{dashboardOrder.date}}</span>
+											<span class="badge badge-pill badge-secondary">{{dashboardOrder.date}}</span>
 										</li>
 										<li class="list-group-item d-flex justify-content-between align-items-center">
-											Extras
-											<span class="badge badge-primary">{{dashboardOrder.extras}}</span>
+											Manufacture Date
+											<span class="badge badge-pill badge-secondary">{{dashboardOrder.mapOfExtras.[1]}}</span>
+										</li>
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											Expiry Date
+											<span class="badge badge-pill badge-secondary">{{dashboardOrder.mapOfExtras.[2]}}</span>
 										</li>
 									</ul>
 									<br>
